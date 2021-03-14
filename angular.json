@@ -171,6 +171,32 @@
           }
         }
       }
+    },
+    "example-lib": {
+      "projectType": "library",
+      "root": "libs/example-lib",
+      "sourceRoot": "libs/example-lib/src",
+      "prefix": "olofens",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/example-lib/tsconfig.lib.json",
+              "libs/example-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/example-lib/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/example-lib"],
+          "options": {
+            "jestConfig": "libs/example-lib/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
