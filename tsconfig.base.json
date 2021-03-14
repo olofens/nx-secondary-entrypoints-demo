@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@olofens/example-lib": ["libs/example-lib/src/index.ts"]
+      "@olofens/example-lib": ["libs/example-lib/src/index.ts"],
+      "@olofens/example-lib/*": ["libs/example-lib/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
